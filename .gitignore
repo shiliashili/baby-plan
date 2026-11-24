@@ -1,0 +1,12 @@
+# 开发用截图（体积大，无需进仓库）
+build/shots/
+build/*.png
+
+# 校验脚本的依赖（本地 npm install 生成）
+node_modules/
+
+# 系统与编辑器杂项
+.DS_Store
+Thumbs.db
+.workbuddy/
+*.log

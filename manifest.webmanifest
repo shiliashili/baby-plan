@@ -1,0 +1,26 @@
+{
+  "name": "柚柚今天学什么",
+  "short_name": "柚柚",
+  "description": "英语启蒙优先的每日打卡计划，数据只存在本机。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F6F4EF",
+  "theme_color": "#F6F4EF",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

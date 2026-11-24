@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#F6F4EF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="description" content="柚柚今天学什么：英语启蒙优先，每天的时间点、绘本和打卡都在这一页。数据只存在你自己的手机上。">
+<title>柚柚今天学什么</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-180.png">
+<link rel="icon" type="image/svg+xml" href="./icons/favicon.svg">
+<link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+<div id="app"></div>
+
+<div class="sheet-mask" id="mask"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-handle"><i></i></div>
+  <div class="sheet-head">
+    <h3 id="sheetTitle">标题</h3>
+    <button class="icon-btn" id="sheetClose" aria-label="关闭">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body" id="sheetBody"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="./js/quotes.js"></script>
+<script src="./js/core.js"></script>
+<script src="./js/baby-plan.js"></script>
+<script src="./js/ui.js"></script>
+</body>
+</html>
