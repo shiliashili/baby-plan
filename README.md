@@ -50,39 +50,11 @@ git push
 
 然后到 Settings → Pages 里开启即可。
 
-### 方式 C：自动部署（GitHub Actions）
+### 关于 Actions 自动部署
 
-如果希望每次 push 自动发布，在仓库里新建 `.github/workflows/pages.yml`：
+**不需要**。上面这种「分支部署」本身就是每次 push 后自动重建，1 分钟左右生效。
 
-```yaml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      - id: deployment
-        uses: actions/deploy-pages@v4
-```
-
-同时在 Settings → Pages 里把 Source 改成 `GitHub Actions`。
+唯一例外：如果你在 Settings → Pages 里把 Source 改成 `GitHub Actions`，那么必须提交一份 `.github/workflows/pages.yml`（`actions/configure-pages@v5` 不能代为开启 Pages，用 `enablement: true` 会因 `GITHUB_TOKEN` 权限不足直接失败——必须在设置里先手动把 Source 指过去，工作流才能跑通）。
 
 ---
 
